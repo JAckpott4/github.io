@@ -7,79 +7,82 @@ body {
 }
 
 #nav {
-width:100%;
-margin:0;
+width:730px;
+margin:0 auto;
 list-style:none;
 position: fixed;
-text-align: center;
-background-color: rgba(160,160,160,0.5);
-
+z-index: 1;
+top: 50%;
+left: 50%;
+margin-top: -540px;
+margin-left: -388px;
+background-color: RGBA(52, 84, 180,0.5 )
 }
 #nav li {
-padding-left:9.05%;
 float:left;
 }
 #nav a {
 display:block;
 text-align:center;
-width:100%;
+width:100px;
 text-decoration:none;
 color: white;
-font-size: 23px;
+font-size: 24px;
 padding-top: 70px;
 font-family: calibri;
-
-margin:0;
-
 }
 #nav a:hover{
-  color: royalblue;
-}
-.col-container {
-  display: table;
-  width: 100%;
-  max-width: 500px;
-  margin: 20px;
-  margin-left: 300px;
-  float: left;
+  color: #3454b4;
+  background-color: royalblue;
 }
 
-.col {
+
+.container {
   display: table-cell;
-  padding: 16px;
-  background-image: url("9.png");
+  position: relative;
   width: 500px;
+  height: 300px;
   background-size: cover;
   text-align: center;
-  border: royalblue;
 }
-.col:hover{
-  background-image: url("10.jpg");
-}
-.col2 {
+
+.image {
   display: table-cell;
-  padding: 16px;
-  background-image: url("11.jpg");
   width: 500px;
+  height: 300px;
   background-size: cover;
   text-align: center;
-  border: royalblue;
 }
-.col2:hover{
-  background-image: url("10.jpg");
-}
-.col3 {
-  display: table-cell;
-  padding: 16px;
-  background-image: url("13.jpg");
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
   width: 500px;
-  background-size: cover;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: royalblue;
+}
+
+.container:hover .overlay {
+  opacity: 0.9;
+}
+
+.text {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
-  border: royalblue;
+  font-family: calibri;
 }
-.col3:hover{
-  background-image: url("12.jpg");
-}
+
 .colfiller {
   display: table-cell;
   padding: 16px;
@@ -150,15 +153,7 @@ margin:0;
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
-.img {
-  text-align: center;
-  background-image: url("9.png");
-  min-height: 600px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: static;
-}
+
 .mySlides {display: none;}
 img {vertical-align: middle;}
 .slideshow-container {
